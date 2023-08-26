@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+/* Moderate violet: hsl(263, 55%, 52%)
+Very dark grayish blue: hsl(217, 19%, 35%)
+Very dark blackish blue: hsl(219, 29%, 14%)
+White: hsl(0, 0%, 100%)
+Light gray: hsl(0, 0%, 81%)
+Light grayish blue: hsl(210, 46%, 95%) */
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+
+
+body{
+    background-color: hsl(210, 46%, 95%);
+    font-family: "Barlow Semi Condensed";
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    margin: auto;
+    display: grid;
+    max-width: 1110px;
+    max-height: 570px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "section1 section1 section2 section5"
+    "section3 section4 section4 section5" ;
+    grid-gap: 25px;
+
+}
+
+.section1{
+    padding: 6%;
+    grid-area: section1;
+    background-color: hsl(263, 55%, 52%);
+    border-radius: 0.5rem;
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 80% 0;
+}
+
+.section2{
+    padding: 12%;
+    grid-area: section2;
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 0.5rem;
+}
+
+.section3{
+    padding: 12%;
+    grid-area: section3;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0.5rem;
+}
+
+.section4{
+    padding: 6% 8%;
+    grid-area: section4;
+    background-color: hsl(219, 29%, 14%);
+    border-radius: 0.5rem;
+}
+
+.section5{
+    padding: 15%;
+    grid-area: section5;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0.5rem;
+}
+
+li{
+    list-style-type: none;
+}
+
+.maintext1{
+    font-weight: 600;
+    font-size: 19px;
+    padding-bottom: 25px;
+    color: white;
+}
+
+.maintext2{
+    font-weight: 600;
+    font-size: 19px;
+    padding-bottom: 25px;
+    color: hsl(217, 19%, 35%);
+}
+
+.subtext1{
+    color:hsl(210, 46%, 95%, 70%);
+    line-height: 1.1rem;
+}
+
+.subtext2{
+    color: hsl(217, 19%, 35%, 70%);
+    line-height: 1.1rem;
+}
+
+.avatar{
+    height: 30px;
+    border-radius: 1rem;
+    border: white solid 1px;
+    margin-right: 15px;
+}
+
+.name1{
+    color: hsl(210, 46%, 95%);
+}
+
+.name2{
+    color: hsl(217, 19%, 35%);
+}
+
+.grad{
+    font-size: 11px;
+    color: hsl(210, 46%, 95%, 50%);
+}
+
+.grad2{
+    font-size: 11px;
+    color: hsl(217, 19%, 35%, 50%);
+}
+
+#danielav{
+    border: 1px solid hsl(283, 55%, 58%);
+}
+
+#patrickav{
+    border: 1px solid hsl(263, 55%, 52%);
+}
+
+#quotation{
+    position: absolute;
+    left: 525px;
+    top: 100px;
+}
+
+.avatarline{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 15px;
+}
+
+.attribution{ 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a{ 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width:500px){
+    .container{
+        max-width: 330px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.8fr 0.7fr 0.9fr 1fr;
+        grid-template-areas: 
+        "section1"
+        "section2"
+        "section3"
+        "section4"
+        "section5";
+    }
+
+    .section1{
+        grid-area: section1;
+    }
+
+    .section2{
+        grid-area: section2;
+    }
+
+    .section3{
+        grid-area: section3;
+    }
+
+    .section4{
+        grid-area: section4;
+    }
+
+    .section5{
+        grid-area: section5;
+    }
+}
